@@ -720,7 +720,7 @@ export default class VideoPlayer extends Component {
       });
     }
     
-    if (this.state.isFullscreen !== nextProps.manuallyIsFullscreen) {
+    if (typeof nextProps.manuallyIsFullscreen != 'undefined' && this.state.isFullscreen !== nextProps.manuallyIsFullscreen) {
       this.setState({
         isFullscreen: nextProps.manuallyIsFullscreen,
       });
